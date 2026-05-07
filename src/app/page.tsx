@@ -1,15 +1,15 @@
 export default function Home() {
   return (
-    <main style={{ 
+    <div style={{ 
       display: 'flex', 
       justifyContent: 'center', 
       alignItems: 'center', 
       height: '100vh', 
-      fontSize: '48px', 
-      fontWeight: 'bold',
-      fontFamily: 'sans-serif' 
+      backgroundColor: '#f0f0f0' 
     }}>
-      MARXAMAT.UZ
-    </main>
-  );
+      <h1 style={{ fontSize: '60px', color: '#333', fontFamily: 'sans-serif' }}>
+        MARXAMAT.UZ
+      </h1>
+    </div>
+  )
 }
