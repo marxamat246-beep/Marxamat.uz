@@ -1,5 +1,4 @@
 import React from 'react';
-import '../globals.css';
 
 export default function Home() {
   const advantages = [
@@ -10,87 +9,73 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans antialiased">
+    <div style={{ minHeight: '100vh', backgroundColor: '#f8fafc', color: '#334155', fontFamily: 'sans-serif', margin: 0, padding: 0 }}>
       
-      {/* ВЕРХНЯЯ ШАПКА (НАВИГАЦИЯ) */}
-      <header className="bg-white shadow-sm border-b border-slate-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            
-            {/* Логотип с иконкой домика */}
-            <div className="flex items-center space-x-3">
-              <div className="text-2xl text-rose-800">🏠</div>
-              <div className="flex flex-col">
-                <span className="text-xl font-black text-slate-900 tracking-tight">MARXAMAT</span>
-                <span className="text-[10px] text-slate-400 font-semibold tracking-wider">Xo'jalik Mollari</span>
-              </div>
+      {/* ВЕРХНЯЯ ШАПКА */}
+      <header style={{ backgroundColor: '#ffffff', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', borderBottom: '1px solid #f1f5f9', position: 'sticky', top: 0, zIndex: 50 }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '64px', display: 'flex', justifyContent: 'between', alignItems: 'center' }}>
+          
+          {/* Логотип */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '24px' }}>🏠</span>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <span style={{ fontWeight: 900, fontSize: '20px', color: '#0f172a', letterSpacing: '-0.5px' }}>MARXAMAT</span>
+              <span style={{ fontSize: '10px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase' }}>Xo'jalik Mollari</span>
             </div>
-
-            {/* Меню и Корзина */}
-            <div className="flex items-center space-x-6">
-              <nav className="hidden sm:flex space-x-6 text-sm font-medium text-slate-600">
-                <a href="#" className="hover:text-rose-800 transition">Главная</a>
-                <a href="#" className="hover:text-rose-800 transition">О нас</a>
-                <a href="#" className="hover:text-rose-800 transition">Контакты</a>
-              </nav>
-              
-              <button className="bg-rose-800 text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-rose-900 transition flex items-center space-x-2 shadow-sm">
-                <span>🛒</span>
-                <span>Корзина</span>
-              </button>
-            </div>
-
           </div>
+
+          {/* Меню и Корзина */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+            <nav style={{ display: 'flex', gap: '24px', fontSize: '14px', fontWeight: 500 }}>
+              <a href="#" style={{ color: '#475569', textDecoration: 'none' }}>Главная</a>
+              <a href="#" style={{ color: '#475569', textDecoration: 'none' }}>О нас</a>
+              <a href="#" style={{ color: '#475569', textDecoration: 'none' }}>Контакты</a>
+            </nav>
+            
+            <button style={{ backgroundColor: '#9d174d', borderRadius: '12px', fontWeight: 'bold', border: 'none', color: 'white', padding: '10px 20px', fontSize: '14px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>🛒</span> Корзина
+            </button>
+          </div>
+
         </div>
       </header>
 
-      {/* ГЛАВНЫЙ БЛОК (БАННЕР И ПРЕИМУЩЕСТВА) */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* ГЛАВНЫЙ БЛОК */}
+      <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '32px 16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
           
           {/* Левый большой малиновый баннер */}
-          <div className="lg:col-span-2 bg-gradient-to-br from-rose-700 to-rose-900 text-white p-8 sm:p-12 rounded-3xl shadow-md flex flex-col justify-between min-h-[360px]">
+          <div style={{ background: 'linear-gradient(135deg, #be185d, #4c0519)', padding: '48px', borderRadius: '24px', color: 'white', minHeight: '320px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gridColumn: 'span 2' }}>
             <div>
-              <h1 className="text-4xl sm:text-5xl font-black tracking-tight mb-4">
+              <h1 style={{ fontSize: '48px', fontWeight: 900, margin: '0 0 16px 0', letterSpacing: '-1px' }}>
                 Marxamat.uz
               </h1>
-              <p className="text-base sm:text-lg text-rose-100 max-w-xl font-medium leading-relaxed">
+              <p style={{ fontSize: '18px', opacity: 0.9, margin: 0, fontWeight: 500, lineHeight: '1.5' }}>
                 Большой магазин хозтоваров, бытовой химии и товаров для дома
               </p>
             </div>
             
-            {/* Две белые/прозрачные кнопки */}
-            <div className="flex flex-wrap gap-3 mt-8">
-              <a 
-                href="tel:+998901234567"
-                className="bg-white text-rose-900 font-bold px-6 py-3 rounded-2xl shadow-sm hover:bg-slate-50 transition text-sm"
-              >
+            {/* Кнопки */}
+            <div style={{ display: 'flex', gap: '12px', marginTop: '32px', flexWrap: 'wrap' }}>
+              <a href="tel:+998901234567" style={{ backgroundColor: 'white', color: '#4c0519', fontWeight: 'bold', padding: '14px 28px', borderRadius: '16px', textDecoration: 'none', fontSize: '14px', display: 'inline-block', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
                 Связаться с нами
               </a>
-              <a 
-                href="https://t.me/marxamat246" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-2xl border border-white/20 transition text-sm"
-              >
+              <a href="https://t.me/marxamat246" target="_blank" rel="noopener noreferrer" style={{ color: 'white', fontWeight: 'bold', padding: '14px 28px', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.3)', textDecoration: 'none', fontSize: '14px', display: 'inline-block', backgroundColor: 'rgba(255,255,255,0.1)' }}>
                 Telegram
               </a>
             </div>
           </div>
 
           {/* Правый блок "Почему выбирают нас" */}
-          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/60 shadow-sm flex flex-col justify-between">
-            <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-6">
+          <div style={{ backgroundColor: 'white', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column' }}>
+            <h3 style={{ fontSize: '24px', fontWeight: 900, color: '#0f172a', margin: '0 0 24px 0' }}>
               Почему выбирают нас
             </h3>
             
-            {/* Список преимуществ из плашек */}
-            <div className="space-y-3 flex-grow justify-center flex flex-col">
+            {/* Плашки */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1, justifyContent: 'center' }}>
               {advantages.map((text, index) => (
-                <div 
-                  key={index} 
-                  className="bg-slate-50 border border-slate-100 px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 shadow-sm hover:border-rose-200 transition"
-                >
+                <div key={index} style={{ backgroundColor: '#f8fafc', border: '1px solid #f1f5f9', padding: '14px 16px', borderRadius: '12px', fontSize: '14px', fontWeight: 600, color: '#334155', boxShadow: '0 1px 2px rgba(0,0,0,0.02)' }}>
                   {text}
                 </div>
               ))}
@@ -100,36 +85,35 @@ export default function Home() {
         </div>
 
         {/* СТРОКА ПОИСКА ТОВАРОВ */}
-        <div className="mt-8 bg-white p-4 rounded-2xl border border-slate-200/60 shadow-sm">
-          <div className="flex gap-3">
-            <div className="relative flex-grow">
-              <span className="absolute inset-y-0 left-4 flex items-center text-slate-400">🔍</span>
+        <div style={{ marginTop: '32px', backgroundColor: 'white', padding: '16px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <div style={{ flexGrow: 1 }}>
               <input 
                 type="text" 
-                placeholder="Искать товары..." 
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-11 pr-4 py-3 text-sm focus:outline-none focus:border-rose-500 transition font-medium"
+                placeholder="🔍 Искать товары..." 
+                style={{ width: '100%', backgroundColor: '#f8fafc', border: '1px solid #cbd5e1', padding: '14px 16px', borderRadius: '12px', fontSize: '14px', boxSizing: 'border-box', outline: 'none' }}
               />
             </div>
-            <button className="bg-rose-800 hover:bg-rose-900 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-sm">
+            <button style={{ backgroundColor: '#9d174d', color: 'white', fontWeight: 'bold', padding: '14px 28px', borderRadius: '12px', border: 'none', cursor: 'pointer', fontSize: '14px' }}>
               Поиск
             </button>
           </div>
         </div>
 
-        {/* ЗАГЛУШКА ДЛЯ КАТАЛОГА */}
-        <section className="mt-12 text-center py-12 border-2 border-dashed border-slate-200 rounded-3xl bg-white">
-          <div className="text-4xl mb-3">📦</div>
-          <h3 className="text-lg font-bold text-slate-800">Наш каталог товаров обновляется</h3>
-          <p className="text-slate-400 text-sm mt-1 max-w-md mx-auto px-4">
+        {/* ЗАГЛУШКА КАТАЛОГА */}
+        <section style={{ marginTop: '48px', textAlign: 'center', padding: '48px 16px', border: '2px dashed #e2e8f0', borderRadius: '24px', backgroundColor: 'white' }}>
+          <div style={{ fontSize: '40px', marginBottom: '12px' }}>📦</div>
+          <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#1e293b', margin: '0 0 8px 0' }}>Наш каталог товаров обновляется</h3>
+          <p style={{ color: '#94a3b8', fontSize: '14px', margin: '0 auto', maxWidth: '400px', lineHeight: '1.5' }}>
             Совсем скоро здесь появятся все наши товары бытовой химии, строительных инструментов и кабельной продукции.
           </p>
         </section>
       </main>
 
       {/* ПОДВАЛ */}
-      <footer className="bg-slate-900 text-slate-500 text-xs py-8 text-center mt-16 border-t border-slate-800">
-        <p className="mb-2 text-slate-400">MARXAMAT.UZ — Качественные хозтовары для вашего дома</p>
-        <p>© {new Date().getFullYear()} Все права защищены</p>
+      <footer style={{ backgroundColor: '#0f172a', color: '#64748b', padding: '32px 16px', marginTop: '64px', textAlign: 'center', fontSize: '12px' }}>
+        <p style={{ margin: '0 0 8px 0', color: '#94a3b8', fontWeight: 500 }}>MARXAMAT.UZ — Качественные хозтовары для вашего дома</p>
+        <p style={{ margin: 0 }}>© {new Date().getFullYear()} Все права защищены</p>
       </footer>
 
     </div>
