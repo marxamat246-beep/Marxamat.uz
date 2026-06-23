@@ -5,7 +5,7 @@ export default function Home() {
     "Большой ассортимент",
     "Бытовая химия и товары для дома",
     "Удобный заказ и связь",
-    "Реальный магазин в Ташкенте"
+    "Реальный магазин в Мархамате"
   ];
 
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       
       {/* ВЕРХНЯЯ ШАПКА */}
       <header style={{ backgroundColor: '#ffffff', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', borderBottom: '1px solid #f1f5f9', position: 'sticky', top: 0, zIndex: 50 }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '64px', display: 'flex', justifyContent: 'between', alignItems: 'center' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '64px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           
           {/* Логотип */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -57,8 +57,12 @@ export default function Home() {
             
             {/* Кнопки */}
             <div style={{ display: 'flex', gap: '12px', marginTop: '32px', flexWrap: 'wrap' }}>
-              <a href="tel:+998901234567" style={{ backgroundColor: 'white', color: '#4c0519', fontWeight: 'bold', padding: '14px 28px', borderRadius: '16px', textDecoration: 'none', fontSize: '14px', display: 'inline-block', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
-                Связаться с нами
+              {/* Ссылка на твой реальный номер телефона */}
+              <a 
+                href="tel:+998903156300" 
+                style={{ backgroundColor: 'white', color: '#4c0519', fontWeight: 'bold', padding: '14px 28px', borderRadius: '16px', textDecoration: 'none', fontSize: '14px', display: 'inline-block', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}
+              >
+                📞 +998 (90) 315-63-00
               </a>
               <a href="https://t.me/marxamat246" target="_blank" rel="noopener noreferrer" style={{ color: 'white', fontWeight: 'bold', padding: '14px 28px', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.3)', textDecoration: 'none', fontSize: '14px', display: 'inline-block', backgroundColor: 'rgba(255,255,255,0.1)' }}>
                 Telegram
@@ -72,7 +76,7 @@ export default function Home() {
               Почему выбирают нас
             </h3>
             
-            {/* Плашки */}
+            {/* Список преимуществ из плашек */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1, justifyContent: 'center' }}>
               {advantages.map((text, index) => (
                 <div key={index} style={{ backgroundColor: '#f8fafc', border: '1px solid #f1f5f9', padding: '14px 16px', borderRadius: '12px', fontSize: '14px', fontWeight: 600, color: '#334155', boxShadow: '0 1px 2px rgba(0,0,0,0.02)' }}>
